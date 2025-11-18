@@ -4,8 +4,8 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <title>Techor IT Solution & Technology HTML Template</title>
-   <meta name="description" content="">
+   <title>EverShift - Empowering African Entrepreneurs Through Digital Transformation</title>
+   <meta name="description" content="EverShift is a 100% black-owned technology company specializing in end-to-end software solutions, cloud engineering, cybersecurity, and AI for African businesses.">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -22,6 +22,102 @@
    <link rel="stylesheet" href="assets/css/magnific-popup.css">
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/main.css">
+
+   <!-- Custom CSS for header contact info and about section -->
+   <style>
+      .tv-header-top-list-box ul {
+         display: flex;
+         flex-wrap: nowrap;
+         align-items: center;
+      }
+      .tv-header-top-list-box ul li {
+         white-space: nowrap;
+         flex-shrink: 0;
+      }
+      /* Ensure icons are visible in about section */
+      .tv-about-area .single-icon-box span {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 60px;
+         height: 60px;
+      }
+      .tv-about-area .single-icon-box span i {
+         font-size: 40px;
+         color: #2B4DFF;
+      }
+      /* Truncate text in about section */
+      .tv-about-area .single-icon-box .icon-box-content p {
+         display: -webkit-box;
+         -webkit-line-clamp: 3;
+         line-clamp: 3;
+         -webkit-box-orient: vertical;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         line-height: 1.6;
+         max-height: calc(1.6em * 3);
+      }
+      /* Service cards - equal height and text truncation */
+      .tv-service-area .row {
+         display: flex;
+         flex-wrap: wrap;
+      }
+      .tv-service-area .row > [class*='col-'] {
+         display: flex;
+         flex-direction: column;
+      }
+      .tv-service-area .single-service-item {
+         display: flex;
+         flex-direction: column;
+         height: 100%;
+      }
+      .tv-service-area .single-service-item p {
+         flex-grow: 1;
+         display: -webkit-box;
+         -webkit-line-clamp: 3;
+         line-clamp: 3;
+         -webkit-box-orient: vertical;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         line-height: 1.6;
+         max-height: calc(1.6em * 3);
+         margin-bottom: 15px;
+      }
+      /* Logo styling */
+      .tv-header-logo img {
+         max-width: 80px;
+         height: auto;
+      }
+      .tv-header-logo a {
+         text-decoration: none;
+      }
+      .tv-header-logo span {
+         color: white;
+         font-size: 20px;
+         font-weight: 600;
+         margin-left: 10px;
+      }
+      /* Logo styling for search, offcanvas, and footer */
+      .search__logo a,
+      .itoffcanvas__logo a,
+      .tv-footer-widget-logo a {
+         text-decoration: none;
+      }
+      .search__logo img,
+      .itoffcanvas__logo img,
+      .tv-footer-widget-logo img {
+         max-width: 80px;
+         height: auto;
+      }
+      .search__logo span,
+      .itoffcanvas__logo span,
+      .tv-footer-widget-logo span {
+         color: white;
+         font-size: 20px;
+         font-weight: 600;
+         margin-left: 10px;
+      }
+   </style>
 
 </head>
 
@@ -54,8 +150,9 @@
                   <div class="search__wrapper">
                      <div class="search__top d-flex justify-content-between align-items-center">
                         <div class="search__logo">
-                           <a href="index.html">
-                              <img src="assets/img/logo/logo-white.png" alt="">
+                           <a href="index.html" class="d-flex align-items-center">
+                              <img src="assets/img/logo/logo1.png" alt="EverShift Logo" style="max-width: 80px; height: auto;">
+                              <span style="color: white; font-size: 20px; font-weight: 600; margin-left: 10px;">EverShift</span>
                            </a>
                         </div>
                         <div class="search__close">
@@ -103,13 +200,13 @@
             <button class="close-btn"><i class="fal fa-times"></i></button>
          </div>
          <div class="itoffcanvas__logo">
-            <a href="index.html">
-               <img src="assets/img/logo/logo-white.png" alt="">
+            <a href="index.html" class="d-flex align-items-center">
+               <img src="assets/img/logo/logo1.png" alt="EverShift Logo" style="max-width: 80px; height: auto;">
+               <span style="color: white; font-size: 20px; font-weight: 600; margin-left: 10px;">EverShift</span>
             </a>
          </div>
          <div class="itoffcanvas__text">
-            <p>Suspendisse interdum consectetur libero id. Fermentum leo vel orci porta non. Euismod viverra nibh
-               cras pulvinar suspen.</p>
+            <p>Empowering African entrepreneurs and SMEs to digitize, scale and thrive through end-to-end software development, cloud engineering, cybersecurity & AI solutions.</p>
          </div>
          <div class="tv-menu-mobile d-xl-none"></div>
          <div class="itoffcanvas__info">
@@ -120,7 +217,7 @@
                </div>
                <div class="itoffcanvas__info-address">
                   <span>Email</span>
-                  <a href="maito:hello@yourmail.com">hello@yourmail.com</a>
+                  <a href="mailto:info@evershift.co.za">info@evershift.co.za</a>
                </div>
             </div>
             <div class="tv-info-wrapper mb-20 d-flex align-items-center">
@@ -129,7 +226,7 @@
                </div>
                <div class="itoffcanvas__info-address">
                   <span>Phone</span>
-                  <a href="tel:(00)45611227890">(00) 456 1122 7890</a>
+                  <a href="tel:+27783997755">+27 78 399 7755</a>
                </div>
             </div>
             <div class="tv-info-wrapper mb-20 d-flex align-items-center">
@@ -138,8 +235,8 @@
                </div>
                <div class="itoffcanvas__info-address">
                   <span>Location</span>
-                  <a href="htits://www.google.com/maps/@37.4801311,22.8928877,3z" target="_blank">Riverside 255,
-                     San Francisco, USA </a>
+                  <a href="https://www.google.com/maps/search/Rivonia,+Edenburg+-+Sandton,+Johannesburg,+South+Africa" target="_blank">Rivonia, Edenburg - Sandton,
+                     Johannesburg, South Africa</a>
                </div>
             </div>
          </div>
@@ -158,14 +255,14 @@
                         <li class="d-none d-lg-inline-block">
                            <span>
                               <i class="fa-solid fa-phone"></i>
-                              <a href="tel:008757845682">(00) 875 784 5682</a>
+                              <a href="tel:+27783997755">+27 78 399 7755</a>
                            </span>
                         </li>
-                        <li><span><i class="fa-solid fa-envelope"></i><a href="mailto:techor@gmail.com">techor@gmail.com</a></span></li>
-                        <li class="d-none d-xxl-inline-block">
+                        <li class="d-none d-lg-inline-block"><span><i class="fa-solid fa-envelope"></i><a href="mailto:info@evershift.co.za">info@evershift.co.za</a></span></li>
+                        <li class="d-none d-lg-inline-block">
                            <span>
                               <i class="fa-solid fa-location-dot"></i>
-                              <a target="_blank" href="https://www.google.com/maps/@23.843848,90.3081992,17.5z?entry=ttu&amp;g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D">371 7th Ave, New York, NY 10001</a>
+                              <a target="_blank" href="https://www.google.com/maps/search/Rivonia,+Edenburg+-+Sandton,+Johannesburg,+South+Africa">Rivonia, Edenburg - Sandton, Johannesburg, South Africa</a>
                            </span>
                         </li>
                      </ul>
@@ -192,98 +289,19 @@
             <div class="p-relative">
                <div class="row align-items-center">
                   <div class="col-xxl-2 col-xl-2 col-6">
-                     <div class="tv-header-logo">
-                        <a href="index.html"><img src="assets/img/logo/logo-white.png" alt=""></a>
+                     <div class="tv-header-logo d-flex align-items-center">
+                        <a href="index.html" class="d-flex align-items-center">
+                           <img src="assets/img/logo/logo1.png" alt="EverShift Logo" style="max-width: 80px; height: auto;">
+                           <span style="color: white; font-size: 20px; font-weight: 600; margin-left: 10px;">EverShift</span>
+                        </a>
                      </div>
                   </div>
                   <div class=" col-xxl-7 col-xl-7 d-none d-xl-block">
                      <div class="tv-header-menu tv-header-dropdown">
                         <nav class="tv-menu-content">
                            <ul>
-                              <li class="has-dropdown p-static">
+                              <li>
                                  <a href="index.html">Home</a>
-                                 <div class="tv-submenu submenu has-home-img">
-                                    <div class="tv-homemenu-wrapper">
-                                       <div class="row gx-6 row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-5">
-                                          <div class="col home-img">
-                                             <div class="home-img-thumb home-img-overly mb-20">
-                                                <img src="assets/img/menu/home-1.jpg" alt>
-                                                <div class="home-img-btn">
-                                                   
-                                                   <a class="tv-btn-sm" href="index.html">
-                                                      <span class="text-one">View Page</span>
-                                                   </a>
-                                                </div>
-                                             </div>
-                                             <div class="home-img-content text-center">
-                                                <h4 class="home-img-title">
-                                                   <a href="index.html">Home 01</a>
-                                                </h4>
-                                             </div>
-                                          </div>
-                                          <div class="col home-img">
-                                             <div class="home-img-thumb home-img-overly mb-20">
-                                                <img src="assets/img/menu/home-2.jpg" alt>
-                                                <div class="home-img-btn">
-                                                   <a class="tv-btn-sm" href="index-2.html">
-                                                      <span class="text-one">View Page</span>
-                                                   </a>
-                                                </div>
-                                             </div>
-                                             <div class="home-img-content text-center">
-                                                <h4 class="home-img-title">
-                                                   <a href="index-2.html">Home 02</a>
-                                                </h4>
-                                             </div>
-                                          </div>
-                                          <div class="col home-img">
-                                             <div class="home-img-thumb home-img-overly mb-20">
-                                                <img src="assets/img/menu/home-3.jpg" alt>
-                                                <div class="home-img-btn">
-                                                   <a class="tv-btn-sm" href="index-3.html">
-                                                      <span class="text-one">View Demo</span>
-                                                   </a>
-                                                </div>
-                                             </div>
-                                             <div class="home-img-content text-center">
-                                                <h4 class="home-img-title">
-                                                   <a href="index-3.html">Home 03</a>
-                                                </h4>
-                                             </div>
-                                          </div>
-                                          <div class="col home-img">
-                                             <div class="home-img-thumb home-img-overly mb-20">
-                                                <img src="assets/img/menu/home-4.jpg" alt>
-                                                <div class="home-img-btn">
-                                                   <a class="tv-btn-sm" href="#">
-                                                      <span class="text-one">Comming Soon</span>
-                                                   </a>
-                                                </div>
-                                             </div>
-                                             <div class="home-img-content text-center">
-                                                <h4 class="home-img-title">
-                                                   <a href="#">Comming Soon</a>
-                                                </h4>
-                                             </div>
-                                          </div>
-                                          <div class="col home-img">
-                                             <div class="home-img-thumb home-img-overly mb-20">
-                                                <img src="assets/img/menu/home-5.jpg" alt>
-                                                <div class="home-img-btn">
-                                                   <a class="tv-btn-sm" href="#">
-                                                      <span class="text-one">Comming Soon</span>
-                                                   </a>
-                                                </div>
-                                             </div>
-                                             <div class="home-img-content text-center">
-                                                <h4 class="home-img-title">
-                                                   <a href="#">Comming Soon</a>
-                                                </h4>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
                               </li>
                               <li>
                                  <a href="about.html">About Us</a>
@@ -359,16 +377,16 @@
             <div class="swiper-wrapper">
                <div class="swiper-slide">
                   <div class="tv-slider-overlay z-index-1 fix p-relative">
-                     <div class="tv-slider-bg" data-background="assets/img/slider/slider-1-1.jpg"></div>
+                     <div class="tv-slider-bg" data-background="assets/Images/slider-1-1.jpg"></div>
                      <div class="container">
                         <div class="row">
                            <div class="col-xl-6 col-lg-6">
                               <div class="tv-slider-content z-index-1">
-                                 <span class="tv-slider-subtitle">Best It Company</span>
-                                 <h1 class="tv-slider-title p-relative">Best It Solution Agency For Your Business
+                                 <span class="tv-slider-subtitle">Empowering African Entrepreneurs</span>
+                                 <h1 class="tv-slider-title p-relative">Digitize, Scale and Thrive with EverShift
                                  </h1>
                                  <div class="tv-slider-text pb-20">
-                                    <p>Leverage agile frameworks to provide a robust synopsis for high level overviews terative approaches bring table survival.
+                                    <p>Delivering end-to-end software development, cloud engineering, cybersecurity & AI solutions to transform your business.
                                     </p>
                                  </div>
                                  <div class="tv-slider-btn">
@@ -387,16 +405,16 @@
                </div>
                <div class="swiper-slide">
                   <div class="tv-slider-overlay z-index-1 fix p-relative">
-                     <div class="tv-slider-bg" data-background="assets/img/slider/slider-1-2.jpg"></div>
+                     <div class="tv-slider-bg" data-background="assets/Images/slider-1-2.jpg"></div>
                      <div class="container">
                         <div class="row">
                            <div class="col-xl-6 col-lg-6">
                               <div class="tv-slider-content z-index-1">
-                                 <span class="tv-slider-subtitle">Best It Company</span>
-                                 <h1 class="tv-slider-title p-relative">Best It Solution Agency For Your Business
+                                 <span class="tv-slider-subtitle">Empowering African Entrepreneurs</span>
+                                 <h1 class="tv-slider-title p-relative">Digitize, Scale and Thrive with EverShift
                                  </h1>
                                  <div class="tv-slider-text pb-20">
-                                    <p>Leverage agile frameworks to provide a robust synopsis for high level overviews terative approaches bring table survival.
+                                    <p>Delivering end-to-end software development, cloud engineering, cybersecurity & AI solutions to transform your business.
                                     </p>
                                  </div>
                                  <div class="tv-slider-btn">
@@ -415,16 +433,16 @@
                </div>
                <div class="swiper-slide">
                   <div class="tv-slider-overlay z-index-1 fix p-relative">
-                     <div class="tv-slider-bg" data-background="assets/img/slider/slider-1-3.jpg"></div>
+                     <div class="tv-slider-bg" data-background="assets/Images/slider-1-3.jpg"></div>
                      <div class="container">
                         <div class="row">
                            <div class="col-xl-6 col-lg-6">
                               <div class="tv-slider-content z-index-1">
-                                 <span class="tv-slider-subtitle">Best It Company</span>
-                                 <h1 class="tv-slider-title p-relative">Best It Solution Agency For Your Business
+                                 <span class="tv-slider-subtitle">Empowering African Entrepreneurs</span>
+                                 <h1 class="tv-slider-title p-relative">Digitize, Scale and Thrive with EverShift
                                  </h1>
                                  <div class="tv-slider-text pb-20">
-                                    <p>Leverage agile frameworks to provide a robust synopsis for high level overviews terative approaches bring table survival.
+                                    <p>Delivering end-to-end software development, cloud engineering, cybersecurity & AI solutions to transform your business.
                                     </p>
                                  </div>
                                  <div class="tv-slider-btn">
@@ -460,13 +478,13 @@
             <div class="row align-items-end">
                <div class="col-xl-5 col-lg-5">
                      <div class="tv-section-title-box">
-                        <span class="tv-section-subtitle tv-spltv-text tv-spltv-in-right">About Your Company</span>
-                        <h4 class="tv-section-title pb-20 tv-spltv-text tv-spltv-in-right">We Execute Ideas From Start to Finish</h4>
+                        <span class="tv-section-subtitle tv-spltv-text tv-spltv-in-right">About EverShift</span>
+                        <h4 class="tv-section-title pb-20 tv-spltv-text tv-spltv-in-right">100% Black-Owned Technology Company</h4>
                      </div>
                </div>
                <div class="col-xl-7 col-lg-7 text-end  ">
                   <div class="tv-fade-anim button" data-fade-from="top" data-ease="bounce" data-delay=".5">
-                     <a href="contact.html" class="tv-btn-secondary">
+                     <a href="about.html" class="tv-btn-secondary">
                         <span class="btn-wrap">
                            <span class="btn-text1">Know More</span>
                            <span class="btn-text2">Know More</span>
@@ -480,24 +498,24 @@
                   <div class="col-xl-4 col-lg-6 col-md-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                      <div class="tv-about-left">
                         <div class="single-icon-box">
-                           <span><img src="assets/img/icon/about-icon-1.png" alt=""></span>
+                           <span><i class="fa-solid fa-bullseye"></i></span>
                            <div class="icon-box-content">
                               <h3>Our Mission</h3>
-                              <p>Our mission is to push boundaries, engage audiences, and driv engage innovation through</p>
+                              <p>Empowering African entrepreneurs and small to medium businesses through digital transformation. We help our clients digitize their operations and scale their online presence...</p>
                            </div>
                         </div>
                         <div class="single-icon-box">
-                           <span><img src="assets/img/icon/about-icon-2.png" alt=""></span>
+                           <span><i class="fa-solid fa-eye"></i></span>
                            <div class="icon-box-content">
-                              <h3>Our Vission</h3>
-                              <p>Our mission is to push boundaries, engage audiences, and driv engage innovation through</p>
+                              <h3>Our Vision</h3>
+                              <p>To become Africa's leading technology partner, transforming the digital landscape for businesses across the continent. We envision a future where every African business has access to world-class technology solutions...</p>
                            </div>
                         </div>
                         <div class="single-icon-box">
-                           <span><img src="assets/img/icon/about-icon-3.png" alt=""></span>
+                           <span><i class="fa-solid fa-star"></i></span>
                            <div class="icon-box-content">
-                              <h3>Our Awards</h3>
-                              <p>Our mission is to push boundaries, engage audiences, and driv engage innovation through</p>
+                              <h3>Our Expertise</h3>
+                              <p>Our core expertise spans software development, cloud engineering, database architecture, cybersecurity, software architecture, and Artificial Intelligence (AI). We leverage modern frameworks and scalable infrastructures...</p>
                            </div>
                         </div>
                      </div>
@@ -505,7 +523,7 @@
                   <div class="col-xl-4 col-lg-6 col-md-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                      <div class="tv-about-middle">
                         <img src="assets/img/about/about-1-1.png" alt="">
-                        <p>Repellendus autem ruibusdam et aut officiis debitis aut re necessitatibus saepe eveniet ut et repudianda sint et molestiae non recusandae. </p>
+                        <p>EverShift specializes in end-to-end software solutions. Our approach ensures performance, reliability, and long-term scalability for our clients across various industries including fintech, retail, healthcare, and logistics.</p>
                      </div>
                   </div>
                   <div class="col-xl-4 d-xxl-block d-xl-block d-none col-md-6 col-sm-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
@@ -527,7 +545,7 @@
             <div class="col-12 text-center">
                   <div class="tv-section-title-box mb-60">
                      <span class="tv-section-subtitle tv-spltv-text tv-spltv-in-right">Our Services</span>
-                     <h4 class="tv-section-title pb-20 tv-spltv-text tv-spltv-in-right">Smart Solutions for a <br> Digital World</h4>
+                     <h4 class="tv-section-title pb-20 tv-spltv-text tv-spltv-in-right">Comprehensive Technology Solutions <br> for African Businesses</h4>
                   </div>
             </div>
          </div>
@@ -548,9 +566,9 @@
                         
                   </span>
                   <h3 class="service-section-title">
-                     Managed IT Services
+                     Software Development & Architecture
                   </h3>
-                  <p>It is a long established fact that reader will be distracte readable content of a when looking.</p>
+                  <p>We design and build tailored software solutions using modern frameworks and architectural patterns. Our development expertise spans web applications, mobile platforms, and enterprise systems...</p>
                   <a href="service-details.html" class="tv-normal-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
                </div>
             </div>
@@ -570,9 +588,9 @@
                         
                   </span>
                   <h3 class="service-section-title">
-                     Cloud Services
+                     Cloud Engineering & Infrastructure
                   </h3>
-                  <p>It is a long established fact that reader will be distracte readable content of a when looking.</p>
+                  <p>Transform your business with scalable, secure cloud solutions across AWS, Microsoft Azure, and Google Cloud Platform. We specialize in cloud migration, infrastructure design, and containerization...</p>
                   <a href="service-details.html" class="tv-normal-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
                </div>
             </div>
@@ -591,9 +609,9 @@
                         
                   </span>
                   <h3 class="service-section-title">
-                     Machine Learning
+                     Data Architecture That Drives Decisions
                   </h3>
-                  <p>It is a long established fact that reader will be distracte readable content of a when looking.</p>
+                  <p>Build a solid data foundation with our comprehensive database solutions. Our services include data modeling, performance tuning, backup strategies, and migration...</p>
                   <a href="service-details.html" class="tv-normal-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
                </div>
             </div>
@@ -611,9 +629,9 @@
                         </svg>
                   </span>
                   <h3 class="service-section-title">
-                     Data Security
+                     Intelligent Security & AI Innovation
                   </h3>
-                  <p>It is a long established fact that reader will be distracte readable content of a when looking.</p>
+                  <p>Protect your digital assets while leveraging intelligent automation. Our cybersecurity services include vulnerability assessments, penetration testing, and compliance consulting...</p>
                   <a href="service-details.html" class="tv-normal-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
                </div>
             </div>
@@ -829,31 +847,31 @@
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-6 mb-30  wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                            <div class="single-process-box">
-                              <img src="assets/img/process/process-1-1.png" alt="">
+                              <img src="assets/img/process/process-1-1.png" alt="Planning and Design Phase">
                               <div class="process-box-content">
                                  <span>STEP - 01</span>
                                  <h2>Initiation & Planning</h2>
-                                 <p>We are architects innovation trailblazers of technological advancement</p>
+                                 <p>We analyze your business needs, create detailed wireframes, and design comprehensive project blueprints to ensure your vision is perfectly captured.</p>
                               </div>
                            </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-6 mb-30  wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                            <div class="single-process-box">
-                              <img src="assets/img/process/process-1-2.png" alt="">
+                              <img src="assets/img/process/process-1-2.png" alt="Development and Coding Phase">
                               <div class="process-box-content">
                                  <span>STEP - 02</span>
                                  <h2>Execution & Development</h2>
-                                 <p>We are architects innovation trailblazers of technological advancement</p>
+                                 <p>Our expert team collaborates to build your solution using modern frameworks, agile methodologies, and industry best practices.</p>
                               </div>
                            </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-6 mb-30  wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
                            <div class="single-process-box">
-                              <img src="assets/img/process/process-1-3.png" alt="">
+                              <img src="assets/img/process/process-1-3.png" alt="Launch and Deployment Phase">
                               <div class="process-box-content">
                                  <span>STEP - 03</span>
-                                 <h2>Testing & Maintenance</h2>
-                                 <p>We are architects innovation trailblazers of technological advancement</p>
+                                 <h2>Testing & Launch</h2>
+                                 <p>We conduct thorough testing, deploy your solution, and provide ongoing support to ensure your project's successful launch and continued success.</p>
                               </div>
                            </div>
                         </div>
@@ -1011,32 +1029,32 @@
                <div class="col-lg-3 col-xl-3 col-md-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                   <div class="single-couter-wrap mt-60   d-flex align-items-center justify-content-center">
                      <div class="inner">
-                        <h5 ><span class="purecounter" data-purecounter-duration="0" data-purecounter-end="25">25</span></h5>
-                        <h6>Years Experience</h6>
+                        <h5 ><span class="purecounter" data-purecounter-duration="0" data-purecounter-end="50">50</span>+</h5>
+                        <h6>Projects Delivered</h6>
                      </div>
                   </div>
                </div>
                <div class="col-lg-3 col-xl-3 col-md-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                   <div class="single-couter-wrap  d-flex align-items-center justify-content-center">
                      <div class="inner">
-                        <h5 ><span class="purecounter" data-purecounter-duration="0" data-purecounter-end="97">97</span>%</h5>
-                        <h6>Retention Rate</h6>
+                        <h5 ><span class="purecounter" data-purecounter-duration="0" data-purecounter-end="98">98</span>%</h5>
+                        <h6>Client Satisfaction Rate</h6>
                      </div>
                   </div>
                </div>
                <div class="col-lg-3 col-xl-3 col-md-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
                   <div class="single-couter-wrap mt-60 d-flex align-items-center justify-content-center">
                      <div class="inner">
-                        <h5 ><span class="purecounter" data-purecounter-duration="0" data-purecounter-end="8">8</span>K</h5>
-                        <h6>Project Completed</h6>
+                        <h5 ><span class="purecounter" data-purecounter-duration="0" data-purecounter-end="6">6</span></h5>
+                        <h6>Core Technology Pillars</h6>
                      </div>
                   </div>
                </div>
                <div class="col-lg-3 col-xl-3 col-md-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
                   <div class="single-couter-wrap d-flex align-items-center justify-content-center">
                     <div class="inner">
-                     <h5 ><span class="purecounter" data-purecounter-duration="0" data-purecounter-end="19">19</span>K</h5>
-                     <h6>Happy Clients</h6>
+                     <h5 >100%</h5>
+                     <h6>First Mindset</h6>
                     </div>
                   </div>
                </div>
@@ -1135,74 +1153,6 @@
          </div>
         </div>
        <!-- testimonial-area-end -->
-
-       <!-- blog-area-start -->
-        <div class="tv-blog-area pt-130 pb-130">
-            <div class="container">
-               <div class="row align-items-end">
-                  <div class="col-xl-6 col-lg-6">
-                     <div class="tv-section-title-box">
-                        <span class="tv-section-subtitle tv-spltv-text tv-spltv-in-right">Our Blogs</span>
-                        <h4 class="tv-section-title pb-20 tv-spltv-text tv-spltv-in-right">Recent Blog & Articles <br> About Technology</h4>
-                     </div>
-                  </div>
-                  <div class="col-xl-6 col-lg-6 text-end">
-                     <div class="tv-fade-anim button" data-fade-from="top" data-ease="bounce" data-delay=".5">
-                        <a href="blog-details.html" class="tv-btn-primary p-relative">
-                           <span class="btn-wrap">
-                              <span class="btn-text1">View All Posts</span>
-                              <span class="btn-text2">View All Posts</span>
-                           </span>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="tv-blog-wrap mt-60">
-                  <div class="row">
-                     <div class="col-lg-6 col-xl-6 col-md-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                        <div class="single-blog-item first mb-30">
-                           <img src="assets/img/blog/blog-thumb-1.png" alt="">
-                           <div class="blog-content mt-30">
-                              <div class="blog-meta">
-                                 <span class="author">Alom Khan</span>
-                                 <span class="date">27 May, 2024</span>
-                              </div>
-                              <h2><a href="blog-details.html">Boost your Startup Business With our Digital Agency</a></h2>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-6 col-xl-3 col-md-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                        <div class="single-blog-item mb-30">
-                           <img src="assets/img/blog/blog-thumb-2.png" alt="">
-                           <div class="blog-content mt-30">
-                              <div class="blog-meta">
-                                 <span class="author">Alom Khan</span>
-                                 <span class="date">27 May, 2024</span>
-                              </div>
-                              <h2><a href="blog-details.html">Planning your Online Business Goals With a Specialist</a></h2>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-6 col-xl-3 col-md-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
-                        <div class="single-blog-item mb-30">
-                           <img src="assets/img/blog/blog-thumb-3.png" alt="">
-                           <div class="blog-content mt-30">
-                              <div class="blog-meta">
-                                 <span class="author">Alom Khan</span>
-                                 <span class="date">27 May, 2024</span>
-                              </div>
-                              <h2><a href="blog-details.html">Including Animation In Your Design System</a></h2>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-                  
-            </div>
-         </div>
-      
-       <!-- blog-area-end -->
    
 
    </main>
@@ -1244,18 +1194,24 @@
                   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-50">
                      <div class="tv-footer-widget tv-footer-col-1">
                         <div class="tv-footer-widget-logo mb-30">
-                           <a href="index.html"><img src="assets/img/logo/logo-white2.png" alt=""></a>
+                           <a href="index.html" class="d-flex align-items-center">
+                              <img src="assets/img/logo/logo1.png" alt="EverShift Logo" style="max-width: 80px; height: auto;">
+                              <span style="color: white; font-size: 20px; font-weight: 600; margin-left: 10px;">EverShift</span>
+                           </a>
                         </div>
                         <div class="tv-footer-widget-text">
-                           <p>Each demo built with Teba will look different. You can customize almost anythin appearance of your website with only a few.</p>
+                           <p>EverShift is a 100% black-owned technology company specializing in end-to-end software solutions, cloud engineering, cybersecurity, and AI for African businesses.</p>
                         </div>
                         <div class="tv-footer-widget-contact-info">
                           <ul>
                            <li>
-                              <a href=""><i class="fa-solid fa-phone"></i>123-456-7890</a>
+                              <a href="tel:+27783997755"><i class="fa-solid fa-phone"></i>+27 78 399 7755</a>
                            </li>
                            <li>
-                              <a href="mailto:techor@example.com"><i class="fa-solid fa-envelope"></i>techor@example.com</a>
+                              <a href="mailto:info@evershift.co.za"><i class="fa-solid fa-envelope"></i>info@evershift.co.za</a>
+                           </li>
+                           <li>
+                              <a href="https://www.evershift.co.za" target="_blank"><i class="fa-solid fa-globe"></i>www.evershift.co.za</a>
                            </li>
                           </ul>
                         </div>
@@ -1281,11 +1237,11 @@
                         <h4 class="tv-footer-widget-title">Services</h4>
                         <div class="tv-footer-widget-menu">
                            <ul>
-                              <li><a href="service-details.html">UI/UX Design</a></li>
-                              <li><a href="service-details.html">App Development</a></li>
-                              <li><a href="service-details.html">Digital Marketing</a></li>
-                              <li><a href="service-details.html">Web Development</a></li>
-                              <li><a href="service-details.html">Cyber Security</a></li>
+                              <li><a href="service-details.html">Software Development</a></li>
+                              <li><a href="service-details.html">Cloud Engineering</a></li>
+                              <li><a href="service-details.html">Data Architecture</a></li>
+                              <li><a href="service-details.html">Cybersecurity</a></li>
+                              <li><a href="service-details.html">AI & Machine Learning</a></li>
                            </ul>
                         </div>
                        </div>
@@ -1316,8 +1272,7 @@
                   <div class="row align-items-center">
                      <div class="col-lg-6">
                         <div class="tv-copyright-left text-center text-lg-start">
-                           <p class="mb-0">© 2025 <a href="#">Techor</a> All Rights Reserved, Created by <a
-                                 href="#">Procoderca</a></p>
+                           <p class="mb-0">© 2025 <a href="https://www.evershift.co.za">EverShift</a> All Rights Reserved</p>
                         </div>
                      </div>
                      <div class="col-lg-6 text-end">
