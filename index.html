@@ -117,16 +117,50 @@
          font-weight: 600;
          margin-left: 10px;
       }
-      /* Counter section spacing */
+      /* Counter section spacing and circular design */
       .tv-counter-area .row {
          gap: 30px;
+         display: flex;
+         flex-wrap: nowrap;
+         justify-content: center;
       }
       .tv-counter-area .row > [class*='col-'] {
          padding-left: 15px;
          padding-right: 15px;
+         flex: 0 0 auto;
       }
       .tv-counter-area .single-couter-wrap {
-         margin-bottom: 30px;
+         margin-bottom: 0;
+      }
+      .tv-counter-area .single-couter-wrap .inner {
+         width: 200px;
+         height: 200px;
+         border-radius: 50%;
+         background-color: #f5f5f5;
+         border: 2px solid #2B4DFF;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         padding: 20px;
+      }
+      .tv-counter-area .single-couter-wrap .inner h5 {
+         color: #1a1a1a;
+         font-size: 36px;
+         font-weight: 700;
+         margin-bottom: 10px;
+         line-height: 1.2;
+      }
+      .tv-counter-area .single-couter-wrap .inner h6 {
+         color: #1a1a1a;
+         font-size: 14px;
+         font-weight: 500;
+         text-align: center;
+         margin: 0;
+      }
+      /* Rounded borders for all images */
+      img {
+         border-radius: 12px;
       }
    </style>
 
@@ -952,13 +986,12 @@
         </div>
        <!-- CTA-area-end -->
 
-
        <!-- counter-area-start -->
-        <div class="tv-counter-area pb-130">
+       <div class="tv-counter-area pt-130 pb-130">
          <div class="container">
             <div class="row justify-content-center align-items-center">
                <div class="col-lg-3 col-xl-3 col-md-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                  <div class="single-couter-wrap mt-60   d-flex align-items-center justify-content-center">
+                  <div class="single-couter-wrap d-flex align-items-center justify-content-center">
                      <div class="inner">
                         <h5 ><span class="purecounter" data-purecounter-duration="0" data-purecounter-end="50">50</span>+</h5>
                         <h6>Projects Delivered</h6>
@@ -966,7 +999,7 @@
                   </div>
                </div>
                <div class="col-lg-3 col-xl-3 col-md-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                  <div class="single-couter-wrap  d-flex align-items-center justify-content-center">
+                  <div class="single-couter-wrap d-flex align-items-center justify-content-center">
                      <div class="inner">
                         <h5 ><span class="purecounter" data-purecounter-duration="0" data-purecounter-end="98">98</span>%</h5>
                         <h6>Client Satisfaction Rate</h6>
@@ -974,7 +1007,7 @@
                   </div>
                </div>
                <div class="col-lg-3 col-xl-3 col-md-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
-                  <div class="single-couter-wrap mt-60 d-flex align-items-center justify-content-center">
+                  <div class="single-couter-wrap d-flex align-items-center justify-content-center">
                      <div class="inner">
                         <h5 ><span class="purecounter" data-purecounter-duration="0" data-purecounter-end="6">6</span></h5>
                         <h6>Core Technology Pillars</h6>
@@ -984,7 +1017,7 @@
                <div class="col-lg-3 col-xl-3 col-md-6 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
                   <div class="single-couter-wrap d-flex align-items-center justify-content-center">
                     <div class="inner">
-                     <h5 >100%</h5>
+                     <h5 >Innovation</h5>
                      <h6>First Mindset</h6>
                     </div>
                   </div>
