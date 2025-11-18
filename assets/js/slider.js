@@ -430,8 +430,8 @@ const teamswiper = new Swiper('.tv-team-slide-active', {
         clickable: true,
         renderBullet: function (index, className) {
             let images = [
-                "assets/img/team/team-1-1.png",
-                "assets/img/team/team-1-2.png",
+                "assets/img/team/team-1-1.jpg",
+                "assets/img/team/team-1-2.jpg",
                 "assets/img/team/team-1-3.png"
             ];
             return `<span class="${className}"><img src="${images[index]}" alt="Thumb ${index + 1}"></span>`;
