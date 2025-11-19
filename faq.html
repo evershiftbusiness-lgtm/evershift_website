@@ -5,7 +5,7 @@
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
    <title>EverShift - Empowering African Entrepreneurs Through Digital Transformation</title>
-   <meta name="description" content="">
+   <meta name="description" content="EverShift is a 100% black-owned technology company specializing in end-to-end software solutions, cloud engineering, cybersecurity, and AI for African businesses.">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -23,6 +23,99 @@
    <link rel="stylesheet" href="assets/css/magnific-popup.css">
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/main.css">
+
+   <style>
+      /* Header top list styling - keep all items on same line */
+      .tv-header-top-list-box ul {
+         display: flex;
+         flex-wrap: nowrap;
+         align-items: center;
+         gap: 15px;
+      }
+      .tv-header-top-list-box ul li {
+         white-space: nowrap;
+         flex-shrink: 0;
+      }
+      .tv-header-top-list-box ul li span {
+         white-space: nowrap;
+      }
+      .tv-header-top-list-box ul li a {
+         white-space: nowrap;
+      }
+      /* Icon styling for about section */
+      .tv-about-area .single-icon-box span {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 60px;
+         height: 60px;
+      }
+      .tv-about-area .single-icon-box span i {
+         font-size: 40px;
+         color: #2B4DFF;
+      }
+      /* Full text display for Mission, Vision, and Expertise */
+      .tv-about-area .single-icon-box .icon-box-content p {
+         line-height: 1.8;
+         color: #666;
+         margin-bottom: 0;
+         text-align: left;
+      }
+      .tv-about-area .single-icon-box {
+         margin-bottom: 30px;
+      }
+      .tv-about-area .single-icon-box:last-child {
+         margin-bottom: 0;
+      }
+      .tv-about-area .single-icon-box .icon-box-content h3 {
+         margin-bottom: 15px;
+         color: #1a1a1a;
+      }
+      /* Rounded borders for all images */
+      img {
+         border-radius: 12px;
+      }
+      /* Service cards - equal height and text truncation */
+      .tv-service-area .row {
+         display: flex;
+         flex-wrap: wrap;
+      }
+      .tv-service-area .row > [class*='col-'] {
+         display: flex;
+         flex-direction: column;
+      }
+      .tv-service-area .single-service-item {
+         display: flex;
+         flex-direction: column;
+         height: 100%;
+      }
+      .tv-service-area .single-service-item p {
+         flex-grow: 1;
+         display: -webkit-box;
+         -webkit-line-clamp: 3;
+         line-clamp: 3;
+         -webkit-box-orient: vertical;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         line-height: 1.6;
+         max-height: calc(1.6em * 3);
+         margin-bottom: 15px;
+      }
+      /* Logo styling */
+      .tv-header-logo img {
+         max-width: 80px;
+         height: auto;
+      }
+      .tv-header-logo a {
+         text-decoration: none;
+      }
+      .tv-header-logo span {
+         color: white;
+         font-size: 20px;
+         font-weight: 600;
+         margin-left: 10px;
+      }
+   </style>
 
 </head>
 
@@ -111,8 +204,7 @@
             </a>
          </div>
          <div class="itoffcanvas__text">
-            <p>Suspendisse interdum consectetur libero id. Fermentum leo vel orci porta non. Euismod viverra nibh
-               cras pulvinar suspen.</p>
+            <p>Empowering African entrepreneurs and SMEs to digitize, scale and thrive through end-to-end software development, cloud engineering, cybersecurity & AI solutions.</p>
          </div>
          <div class="tv-menu-mobile d-xl-none"></div>
          <div class="itoffcanvas__info">
@@ -150,6 +242,7 @@
    <div class="body-overlay"></div>
    <!-- tv-offcanvus-area-end -->
 
+
    <header class="tv-header-height">
       <div class="tv-header-top-area tv-header-top-ptb">
          <div class="container container-1750">
@@ -160,14 +253,14 @@
                         <li class="d-none d-lg-inline-block">
                            <span>
                               <i class="fa-solid fa-phone"></i>
-                              <a href="tel:+27783997755">+27 78 399 7755</a>
+                              <a href="tel:+27783997755">+27 78 399 7755 / </a><a href="tel:+27636867389">+27 63 686 7389</a>
                            </span>
                         </li>
-                        <li><span><i class="fa-solid fa-envelope"></i><a href="mailto:info@evershift.co.za">info@evershift.co.za</a></span></li>
-                        <li class="d-none d-xxl-inline-block">
+                        <li class="d-none d-lg-inline-block"><span><i class="fa-solid fa-envelope"></i><a href="mailto:info@evershift.co.za">info@evershift.co.za</a></span></li>
+                        <li class="d-none d-lg-inline-block">
                            <span>
                               <i class="fa-solid fa-location-dot"></i>
-                              <a target="_blank" href="https://www.google.com/maps/@23.843848,90.3081992,17.5z?entry=ttu&amp;g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D">Rivonia, Edenburg - Sandton, Johannesburg, South Africa</a>
+                              <a target="_blank" href="https://www.google.com/maps/search/Rivonia,+Edenburg+-+Sandton,+Johannesburg,+South+Africa">Rivonia, Edenburg - Sandton, Johannesburg, South Africa</a>
                            </span>
                         </li>
                      </ul>
@@ -203,7 +296,7 @@
                   </div>
                   <div class=" col-xxl-7 col-xl-7 d-none d-xl-block">
                      <div class="tv-header-menu tv-header-dropdown">
-                        <nav class="tv-menu-content">
+                      <nav class="tv-menu-content">
                            <ul>
                               <li>
                                  <a href="index.html">Home</a>
@@ -211,34 +304,14 @@
                               <li>
                                  <a href="about.html">About Us</a>
                               </li>
-                              <li class="has-dropdown">
+                              <li>
                                  <a href="service.html">Services</a>
-                                 <ul class="tv-submenu submenu">
-                                    <li><a href="service.html">Service</a></li>
-                                    <li><a href="service-details.html">Services Details</a></li>
-                                 </ul>
+                               
                               </li>
-                              <li class="has-dropdown">
-                                 <a href="#">Pages</a>
-                                 <ul class="tv-submenu submenu">
-                                    <li><a href="team.html">Team</a></li>
-                                    <li><a href="team-details.html">Team Details</a></li>
-                                    <li><a href="price.html">Price</a></li>
-                                    <li><a href="project.html">projects</a></li>
-                                    <li><a href="project-details.html">Project Details</a></li>
-                                    <li><a href="faq.html">Faq</a></li>
-                                    <li><a href="404.html">404</a></li>
-                                 </ul>
+                                <li>
+                                 <a href="faq.html">Faqs</a>
+                               
                               </li>
-                              <li class="has-dropdown">
-                                 <a href="blog.html">Blog</a>
-                                 <ul class="tv-submenu submenu">
-                                    <li><a href="blog-grid.html">Blog Grid</a></li>
-                                    <li><a href="blog-list.html">Blog List</a></li>
-                                    <li><a href="blog-details.html">Blog details</a></li>
-                                 </ul>
-                              </li>
-
                               <li>
                                  <a href="contact.html">Contact</a>
                               </li>
@@ -301,150 +374,146 @@
 
       <!-- faq-area-start -->
        <div class="tv-faq-area pt-130 pb-130">
-         <div class="container">
-            <div class="row gy-4">
-              <div class="col-xxl-4 col-xl-4 col-lg-4">
-               <div class="tv-faq-left-wrap">
-                  <div class="tv-section-title-box mb-50">
-                     <span class="tv-section-subtitle tv-spltv-text tv-spltv-in-right">Question</span>
-                     <h4 class="tv-section-title tv-spltv-text tv-spltv-in-right">Frequently asked asked question</h4>
-                     <p>If you need immediate assistance, click the button below to chat live with a Customer Service Customer live with representative.</p>
-                  </div>
-                  <div class="tv-faq-form">
-                     <h4>Have any Question</h4>
-                     <form action="#">
-                        <div class="tv-contact-input-box mb-24">
-                           <input type="text" placeholder="Full Name *">
-   
-                        </div>
-                        <div class="it-contact-textarea-box mb-24">
-                           <textarea placeholder="Your Message *"></textarea>
-                        </div>
-                        <button class="tv-btn-primary">
-                           <span class="btn-wrap">
-                              <span class="btn-text1">Ask Question Now</span>
-                              <span class="btn-text2">Ask Question Now</span>
-                           </span>
-                        </button>
-                     </form>
-                  </div>
+   <div class="container">
+      <div class="row gy-4">
+         <div class="col-xxl-4 col-xl-4 col-lg-4">
+            <div class="tv-faq-left-wrap">
+               <div class="tv-section-title-box mb-50">
+                  <span class="tv-section-subtitle tv-spltv-text tv-spltv-in-right">Question</span>
+                  <h4 class="tv-section-title tv-spltv-text tv-spltv-in-right">Frequently Asked Questions</h4>
+                  <p>Have questions about our services, pricing, or processes? Find answers to common questions below, or reach out to our team for personalized assistance.</p>
                </div>
-              </div>
-              <div class="col-xxl-8 col-xl-8 col-lg-8">
-               <div class="tv-custom-accordion tv-custom-accordion-style-2 style-3">
-                  <div class="accordion" id="accordionExample">
-                     <div class="accordion-items">
-                        <h2 class="accordion-header" id="headingOne">
-                           <button class="accordion-buttons" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              Q1. What Is The Design Process For Branding?
-                           </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
-                           <div class="accordion-body d-flex align-items-center">
-                              <p class="mb-0">How quick is quick? For most design, we’re talking 2-3 business days. We balance speed with quality,ensuring you get top-north design swiftly</p>
-                            
-                           </div>
-                        </div>
+               <div class="tv-faq-form">
+                  <h4>Have any Question</h4>
+                  <form action="#">
+                     <div class="tv-contact-input-box mb-24">
+                        <input type="text" placeholder="Full Name *">
                      </div>
-                     <div class="accordion-items">
-                        <h2 class="accordion-header" id="headingTwo">
-                           <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                              Q2. How Much Does Logo Design Services Cost?
-                           </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                           <div class="accordion-body d-flex align-items-center">
-                              <p class="mb-0">How quick is quick? For most design, we’re talking 2-3 business days. We balance speed with quality,ensuring you get top-north design swiftly/p>
-                            
-                           </div>
-                        </div>
+                     <div class="it-contact-textarea-box mb-24">
+                        <textarea placeholder="Your Message *"></textarea>
                      </div>
-                     <div class="accordion-items">
-                        <h2 class="accordion-header" id="headingThree">
-                           <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                              Q3.How Long Will It Take To Complete My Project?
-                           </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                           <div class="accordion-body d-flex align-items-center">
-                              <p class="mb-0">How quick is quick? For most design, we’re talking 2-3 business days. We balance speed with quality,ensuring you get top-north design swiftly</p>
-                            
-                           </div>
-                        </div>
-                     </div>
-                     <div class="accordion-items">
-                        <h2 class="accordion-header" id="headingFour">
-                           <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                              Q4.What Is Included In A Round Of Revisions?
-                           </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                           <div class="accordion-body d-flex align-items-center">
-                              <p class="mb-0">How quick is quick? For most design, we’re talking 2-3 business days. We balance speed with quality,ensuring you get top-north design swiftly</p>
-                            
-                           </div>
-                        </div>
-                     </div>
-                     <div class="accordion-items">
-                        <h2 class="accordion-header" id="headingFour4">
-                           <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour4" aria-expanded="false" aria-controls="collapseFour4">
-                              Q5. Are we too small for managed IT services?
-                           </button>
-                        </h2>
-                        <div id="collapseFour4" class="accordion-collapse collapse" aria-labelledby="headingFour4" data-bs-parent="#accordionExample">
-                           <div class="accordion-body d-flex align-items-center">
-                              <p class="mb-0">How quick is quick? For most design, we’re talking 2-3 business days. We balance speed with quality,ensuring you get top-north design swiftly.</p>
-                            
-                           </div>
-                        </div>
-                     </div>
-                     <div class="accordion-items">
-                        <h2 class="accordion-header" id="headingFour5">
-                           <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour5" aria-expanded="false" aria-controls="collapseFour5">
-                              Q6. Why can't we print on both sides of the paper?
-                           </button>
-                        </h2>
-                        <div id="collapseFour5" class="accordion-collapse collapse" aria-labelledby="headingFour5" data-bs-parent="#accordionExample">
-                           <div class="accordion-body d-flex align-items-center">
-                              <p class="mb-0">How quick is quick? For most design, we’re talking 2-3 business days. We balance speed with quality,ensuring you get top-north design swiftly.</p>
-                            
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="accordion-items">
-                        <h2 class="accordion-header" id="headingFour6">
-                           <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour6" aria-expanded="false" aria-controls="collapseFour6">
-                              Q7. What is a statement of work in project management?
-                           </button>
-                        </h2>
-                        <div id="collapseFour6" class="accordion-collapse collapse" aria-labelledby="headingFour6" data-bs-parent="#accordionExample">
-                           <div class="accordion-body d-flex align-items-center">
-                              <p class="mb-0">How quick is quick? For most design, we’re talking 2-3 business days. We balance speed with quality,ensuring you get top-north design swiftly.</p>
-                            
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="accordion-items">
-                        <h2 class="accordion-header" id="headingFour7">
-                           <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour7" aria-expanded="false" aria-controls="collapseFour7">
-                              Q8. How to become an agile project manager?
-                           </button>
-                        </h2>
-                        <div id="collapseFour7" class="accordion-collapse collapse" aria-labelledby="headingFour7" data-bs-parent="#accordionExample">
-                           <div class="accordion-body d-flex align-items-center">
-                              <p class="mb-0">How quick is quick? For most design, we’re talking 2-3 business days. We balance speed with quality,ensuring you get top-north design swiftly.</p>
-                            
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+                     <button class="tv-btn-primary">
+                        <span class="btn-wrap">
+                           <span class="btn-text1">Ask Question Now</span>
+                           <span class="btn-text2">Ask Question Now</span>
+                        </span>
+                     </button>
+                  </form>
                </div>
-              </div> 
             </div>
          </div>
-       </div>
+         <div class="col-xxl-8 col-xl-8 col-lg-8">
+            <div class="tv-custom-accordion tv-custom-accordion-style-2 style-3">
+               <div class="accordion" id="accordionExample">
+                  <div class="accordion-items">
+                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-buttons" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                           Q1. What services does EverShift offer?
+                        </button>
+                     </h2>
+                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body d-flex align-items-center">
+                           <p class="mb-0">We provide end-to-end technology solutions including custom software development, cloud engineering (AWS, Azure, GCP), database architecture, cybersecurity, AI & machine learning, software architecture, and DevOps/CI-CD pipelines tailored for African SMEs.</p>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <div class="accordion-items">
+                     <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                           Q2. How much do your services cost?
+                        </button>
+                     </h2>
+                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body d-flex align-items-center">
+                           <p class="mb-0">Project costs vary based on scope, complexity, and timeline. We offer flexible pricing models including fixed-price projects, time & materials, and retainer agreements. Contact us for a free consultation and customized quote based on your specific requirements.</p>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <div class="accordion-items">
+                     <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                           Q3. How long does it take to complete a software development project?
+                        </button>
+                     </h2>
+                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body d-flex align-items-center">
+                           <p class="mb-0">Timeline depends on project complexity. Simple applications take 4-8 weeks, medium complexity projects 2-4 months, and enterprise solutions 4-6+ months. We use agile methodologies to deliver working features incrementally, ensuring value delivery throughout the project.</p>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <div class="accordion-items">
+                     <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                           Q4. Do you work with startups and small businesses?
+                        </button>
+                     </h2>
+                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body d-flex align-items-center">
+                           <p class="mb-0">Absolutely! Our mission is to empower African entrepreneurs and SMEs. We've successfully delivered 50+ projects for businesses of all sizes. We offer scalable solutions that grow with your business and flexible payment plans for startups.</p>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <div class="accordion-items">
+                     <h2 class="accordion-header" id="headingFour4">
+                        <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour4" aria-expanded="false" aria-controls="collapseFour4">
+                           Q5. What cloud platforms do you specialize in?
+                        </button>
+                     </h2>
+                     <div id="collapseFour4" class="accordion-collapse collapse" aria-labelledby="headingFour4" data-bs-parent="#accordionExample">
+                        <div class="accordion-body d-flex align-items-center">
+                           <p class="mb-0">We're experts in all major cloud platforms including Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP). We help with cloud migration, infrastructure design, containerization, serverless architectures, and CI/CD pipeline implementation.</p>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <div class="accordion-items">
+                     <h2 class="accordion-header" id="headingFour5">
+                        <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour5" aria-expanded="false" aria-controls="collapseFour5">
+                           Q6. Can you help migrate our existing system to the cloud?
+                        </button>
+                     </h2>
+                     <div id="collapseFour5" class="accordion-collapse collapse" aria-labelledby="headingFour5" data-bs-parent="#accordionExample">
+                        <div class="accordion-body d-flex align-items-center">
+                           <p class="mb-0">Yes! Cloud migration is one of our core services. We assess your current infrastructure, develop a migration strategy, ensure zero downtime during transition, and optimize your cloud setup for performance and cost-efficiency. We've helped clients reduce operational costs by up to 40%.</p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-items">
+                     <h2 class="accordion-header" id="headingFour6">
+                        <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour6" aria-expanded="false" aria-controls="collapseFour6">
+                           Q7. What AI and machine learning solutions do you offer?
+                        </button>
+                     </h2>
+                     <div id="collapseFour6" class="accordion-collapse collapse" aria-labelledby="headingFour6" data-bs-parent="#accordionExample">
+                        <div class="accordion-body d-flex align-items-center">
+                           <p class="mb-0">We develop custom machine learning models, predictive analytics systems, and intelligent automation solutions designed specifically for African market challenges. Our AI services include data analysis, recommendation engines, chatbots, and business intelligence tools.</p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="accordion-items">
+                     <h2 class="accordion-header" id="headingFour7">
+                        <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour7" aria-expanded="false" aria-controls="collapseFour7">
+                           Q8. Do you provide ongoing support and maintenance?
+                        </button>
+                     </h2>
+                     <div id="collapseFour7" class="accordion-collapse collapse" aria-labelledby="headingFour7" data-bs-parent="#accordionExample">
+                        <div class="accordion-body d-flex align-items-center">
+                           <p class="mb-0">Yes, we offer comprehensive post-launch support including bug fixes, security updates, performance monitoring, feature enhancements, and technical support. We provide flexible maintenance packages ranging from basic support to 24/7 monitoring and rapid response services.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> 
+      </div>
+   </div>
+</div>
       <!-- faq-area-end -->
 
      
@@ -455,7 +524,7 @@
    <footer>
 
       <!-- footer-area-start -->
-      <div class="tv-footer-wrap footer-bg z-index-1 pt-130">
+    <div class="tv-footer-wrap footer-bg z-index-1 pt-130">
          <div class="tv-footer-top-area">
             <div class="container">
                <div class="tv-footer-top-area-form">
@@ -500,10 +569,13 @@
                         <div class="tv-footer-widget-contact-info">
                           <ul>
                            <li>
-                              <a href=""><i class="fa-solid fa-phone"></i>123-456-7890</a>
+                              <a href="tel:+27783997755"><i class="fa-solid fa-phone"></i>+27 78 399 7755</a>
                            </li>
                            <li>
                               <a href="mailto:info@evershift.co.za"><i class="fa-solid fa-envelope"></i>info@evershift.co.za</a>
+                           </li>
+                           <li>
+                              <a href="https://www.evershift.co.za" target="_blank"><i class="fa-solid fa-globe"></i>www.evershift.co.za</a>
                            </li>
                           </ul>
                         </div>
@@ -529,11 +601,11 @@
                         <h4 class="tv-footer-widget-title">Services</h4>
                         <div class="tv-footer-widget-menu">
                            <ul>
-                              <li><a href="service-details.html">UI/UX Design</a></li>
-                              <li><a href="service-details.html">App Development</a></li>
-                              <li><a href="service-details.html">Digital Marketing</a></li>
-                              <li><a href="service-details.html">Web Development</a></li>
-                              <li><a href="service-details.html">Cyber Security</a></li>
+                              <li><a href="#">Software Development</a></li>
+                              <li><a href="#">Cloud Engineering</a></li>
+                              <li><a href="#">Data Architecture</a></li>
+                              <li><a href="#">Cybersecurity</a></li>
+                              <li><a href="#">AI & Machine Learning</a></li>
                            </ul>
                         </div>
                        </div>
@@ -564,8 +636,7 @@
                   <div class="row align-items-center">
                      <div class="col-lg-6">
                         <div class="tv-copyright-left text-center text-lg-start">
-                           <p class="mb-0">© 2025 <a href="#">Techor</a> All Rights Reserved, Created by <a
-                                 href="#">Procoderca</a></p>
+                           <p class="mb-0">© 2025 <a href="https://www.evershift.co.za">EverShift</a> All Rights Reserved</p>
                         </div>
                      </div>
                      <div class="col-lg-6 text-end">
