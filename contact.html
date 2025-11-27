@@ -130,6 +130,63 @@
       .tv-header-search:hover i {
          color: #2B4DFF;
       }
+      /* Contact form select dropdown styling to match inputs */
+      .tv-contact-right-wrap .tv-contact-select .nice-select {
+         height: 55px;
+         line-height: 55px;
+         background-color: #F5F6F7 !important;
+         border: 1px solid rgba(88, 91, 111, 0.2) !important;
+         border-radius: 12px !important;
+         padding: 0 25px;
+         width: 100%;
+         color: #0F313A;
+      }
+      .tv-contact-right-wrap .tv-contact-select .nice-select span {
+         color: #525252;
+         font-size: 16px;
+      }
+      .tv-contact-right-wrap .tv-contact-select .nice-select:focus,
+      .tv-contact-right-wrap .tv-contact-select .nice-select.open {
+         border-color: #2B4DFF !important;
+      }
+      .tv-contact-right-wrap .tv-contact-select .nice-select .list {
+         width: 100%;
+         border-radius: 12px;
+         margin-top: 5px;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+         background-color: #F5F6F7;
+      }
+      .tv-contact-right-wrap .tv-contact-select .nice-select .option {
+         padding: 12px 25px;
+         color: #0F313A;
+      }
+      .tv-contact-right-wrap .tv-contact-select .nice-select .option:hover,
+      .tv-contact-right-wrap .tv-contact-select .nice-select .option.focus,
+      .tv-contact-right-wrap .tv-contact-select .nice-select .option.selected {
+         background-color: #2B4DFF;
+         color: white;
+      }
+      /* Add spacing between select dropdown and message field */
+      .tv-contact-right-wrap #selectServiceContainer {
+         margin-bottom: 24px !important;
+      }
+      .tv-contact-right-wrap .it-contact-input-box:has(#contactService),
+      .tv-contact-right-wrap .it-contact-input-box:has(select),
+      .tv-contact-right-wrap .it-contact-input-box:has(.nice-select) {
+         margin-bottom: 24px !important;
+      }
+      .tv-contact-right-wrap .it-contact-textarea-box {
+         margin-top: 24px !important;
+         margin-bottom: 24px !important;
+      }
+      /* Ensure nice-select doesn't remove spacing */
+      .tv-contact-right-wrap .nice-select {
+         margin-bottom: 0 !important;
+      }
+      /* Force spacing - target the container after select */
+      .tv-contact-right-wrap #selectServiceContainer + .it-contact-textarea-box {
+         margin-top: 24px !important;
+      }
    </style>
 
 </head>
@@ -231,7 +288,7 @@
                </div>
                <div class="itoffcanvas__info-address">
                   <span>Email</span>
-                  <a href="maito:hello@yourmail.com">hello@yourmail.com</a>
+                  <a href="mailto:info@evershift.co.za">info@evershift.co.za</a>
                </div>
             </div>
             <div class="tv-info-wrapper mb-20 d-flex align-items-center">
@@ -240,7 +297,16 @@
                </div>
                <div class="itoffcanvas__info-address">
                   <span>Phone</span>
-                  <a href="tel:(00)45611227890">+27 78 399 7755</a>
+                  <a href="tel:+27783997755">+27 78 399 7755</a>
+               </div>
+            </div>
+            <div class="tv-info-wrapper mb-20 d-flex align-items-center">
+               <div class="itoffcanvas__info-icon">
+                  <a href="#"><i class="fal fa-phone-alt"></i></a>
+               </div>
+               <div class="itoffcanvas__info-address">
+                  <span>Phone</span>
+                  <a href="tel:+27636867389">+27 63 686 7389</a>
                </div>
             </div>
             <div class="tv-info-wrapper mb-20 d-flex align-items-center">
@@ -460,26 +526,47 @@
                      <div class="tv-contact-right-wrap">
                         <h1 class="text-white" data-translate="contact-form-title">Make an Appointment</h1>
                         <p data-translate="contact-form-description">Feel free to contact with us, we don't spam your email</p>
-                        <form action="#">
-                           <div class="tv-contact-input-box mb-24">
-                              <input type="text" placeholder="Full Name *" data-translate="contact-name-placeholder">
-                           </div>
-                           <div class="tv-contact-input-box mb-24">
-                              <input type="email" placeholder="Email Here *" data-translate="contact-email-placeholder">
-                           </div>
-                           <div class="tv-contact-input-box mb-24">
-                              <input type="text" placeholder="Select Service *" data-translate="contact-service-placeholder">
-                           </div>
-                           <div class="it-contact-textarea-box mb-24">
-                              <textarea placeholder="Your Message *" rows="3" data-translate="contact-message-placeholder"></textarea>
-                           </div>
-                           <button class="tv-btn-primary">
-                              <span class="btn-wrap">
-                                 <span class="btn-text1" data-translate="contact-submit">Submit Message</span>
-                                 <span class="btn-text2" data-translate="contact-submit">Submit Message</span>
-                              </span>
-                           </button>
-                        </form>
+                        <div class="tv-contact-select">
+                           <form id="contactForm" action="https://formsubmit.co/info@evershift.co.za" method="POST">
+                              <input type="hidden" name="_subject" value="New Contact Form Submission from EverShift Website">
+                              <input type="hidden" name="_captcha" value="false">
+                              <input type="hidden" name="_next" value="">
+                              <input type="hidden" name="_template" value="box">
+                              
+                              <div id="formMessage" style="display: none; margin-bottom: 20px; padding: 15px; border-radius: 5px;"></div>
+                              <div class="it-contact-input-box mb-24">
+                                 <input type="text" name="name" id="contactName" placeholder="Full Name *" data-translate="contact-name-placeholder" required>
+                              </div>
+                              <div class="it-contact-input-box mb-24">
+                                 <input type="email" name="email" id="contactEmail" placeholder="Email Here *" data-translate="contact-email-placeholder" required>
+                              </div>
+                              <div class="it-contact-input-box mb-24">
+                                 <input type="tel" name="phone" id="contactPhone" placeholder="Phone Number *" data-translate="contact-phone-placeholder" required>
+                              </div>
+                              <div class="it-contact-input-box mb-24" id="selectServiceContainer">
+                                 <select name="service" id="contactService" required>
+                                    <option value="" selected data-translate="contact-service-placeholder">Select Service *</option>
+                                    <option value="Software Development" data-translate="service-option-1">Software Development</option>
+                                    <option value="Cloud Infrastructure" data-translate="service-option-2">Cloud Infrastructure</option>
+                                    <option value="Database Architecture" data-translate="service-option-3">Database Architecture</option>
+                                    <option value="Cybersecurity Solutions" data-translate="service-option-4">Cybersecurity Solutions</option>
+                                    <option value="AI & Machine Learning" data-translate="service-option-5">AI & Machine Learning</option>
+                                    <option value="Software Architecture" data-translate="service-option-6">Software Architecture</option>
+                                    <option value="DevOps & CI/CD Pipelines" data-translate="service-option-7">DevOps & CI/CD Pipelines</option>
+                                    <option value="Digital Transformation" data-translate="service-option-8">Digital Transformation</option>
+                                 </select>
+                              </div>
+                              <div class="it-contact-textarea-box mb-24">
+                                 <textarea name="message" id="contactMessage" placeholder="Your Message *" rows="3" data-translate="contact-message-placeholder" required></textarea>
+                              </div>
+                              <button type="submit" class="tv-btn-primary" id="submitBtn">
+                                 <span class="btn-wrap">
+                                    <span class="btn-text1" data-translate="contact-submit">Submit Message</span>
+                                    <span class="btn-text2" data-translate="contact-submit">Submit Message</span>
+                                 </span>
+                              </button>
+                           </form>
+                        </div>
                      </div>
                   </div>
                </div>
@@ -546,10 +633,13 @@
                         <div class="tv-footer-widget-contact-info">
                           <ul>
                            <li>
+                              <a href="mailto:info@evershift.co.za"><i class="fa-solid fa-envelope"></i>info@evershift.co.za</a>
+                           </li>
+                           <li>
                               <a href="tel:+27783997755"><i class="fa-solid fa-phone"></i>+27 78 399 7755</a>
                            </li>
                            <li>
-                              <a href="mailto:info@evershift.co.za"><i class="fa-solid fa-envelope"></i>info@evershift.co.za</a>
+                              <a href="tel:+27636867389"><i class="fa-solid fa-phone"></i>+27 63 686 7389</a>
                            </li>
                            <li>
                               <a href="https://www.evershift.co.za" target="_blank"><i class="fa-solid fa-globe"></i>www.evershift.co.za</a>
@@ -654,6 +744,50 @@
    <script src="assets/js/main.js"></script>
    <script src="assets/js/language.js"></script>
 
+   <script>
+      // Handle contact form submission
+      document.addEventListener('DOMContentLoaded', function() {
+         const contactForm = document.getElementById('contactForm');
+         const formMessage = document.getElementById('formMessage');
+         const submitBtn = document.getElementById('submitBtn');
+         
+         if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+               // Show loading state
+               submitBtn.disabled = true;
+               submitBtn.innerHTML = '<span class="btn-wrap"><span class="btn-text1">Sending...</span><span class="btn-text2">Sending...</span></span>';
+               
+               // Hide previous messages
+               formMessage.style.display = 'none';
+               
+               // Set the redirect URL to stay on the same page
+               const nextInput = contactForm.querySelector('input[name="_next"]');
+               if (nextInput) {
+                  nextInput.value = window.location.href + '?success=true';
+               }
+               
+               // Form will submit normally to FormSubmit
+               // After submission, FormSubmit will redirect back
+            });
+            
+            // Check if we're returning from a successful submission
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('success') === 'true') {
+               formMessage.style.display = 'block';
+               formMessage.style.backgroundColor = '#d4edda';
+               formMessage.style.color = '#155724';
+               formMessage.style.border = '1px solid #c3e6cb';
+               formMessage.textContent = 'Thank You! Your message has been sent successfully. We will get back to you soon.';
+               
+               // Reset form
+               contactForm.reset();
+               
+               // Clean URL
+               window.history.replaceState({}, document.title, window.location.pathname);
+            }
+         }
+      });
+   </script>
 
 </body>
 

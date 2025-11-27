@@ -72,10 +72,7 @@ const translations = {
         'cta-text': 'Feel free to contact with us, we don\'t spam your email',
         'cta-name': 'Full Name *',
         'cta-email': 'Email Here *',
-        'cta-select': 'Select an option *',
-        'cta-option-1': 'Web developement',
-        'cta-option-2': 'Mobile APP',
-        'cta-option-3': 'Graphice Design',
+        'cta-select': 'Select Service *',
         'cta-message': 'Your Message *',
         'cta-submit': 'Submit Message',
         
@@ -128,9 +125,18 @@ const translations = {
         'contact-form-description': 'Feel free to contact with us, we don\'t spam your email',
         'contact-name-placeholder': 'Full Name *',
         'contact-email-placeholder': 'Email Here *',
+        'contact-phone-placeholder': 'Phone Number *',
         'contact-service-placeholder': 'Select Service *',
         'contact-message-placeholder': 'Your Message *',
         'contact-submit': 'Submit Message',
+        'service-option-1': 'Software Development',
+        'service-option-2': 'Cloud Infrastructure',
+        'service-option-3': 'Database Architecture',
+        'service-option-4': 'Cybersecurity Solutions',
+        'service-option-5': 'AI & Machine Learning',
+        'service-option-6': 'Software Architecture',
+        'service-option-7': 'DevOps & CI/CD Pipelines',
+        'service-option-8': 'Digital Transformation',
         'contact-projects': '350+ Projects Done',
         'contact-projects-desc': 'From banking and insurance to wealth the management and security on there',
         'contact-clients': '500+ Happy Clients',
@@ -268,10 +274,7 @@ const translations = {
         'cta-text': 'N\'hésitez pas à nous contacter, nous ne spammons pas votre email',
         'cta-name': 'Nom Complet *',
         'cta-email': 'Email Ici *',
-        'cta-select': 'Sélectionner une option *',
-        'cta-option-1': 'Développement Web',
-        'cta-option-2': 'Application Mobile',
-        'cta-option-3': 'Design Graphique',
+        'cta-select': 'Sélectionner un Service *',
         'cta-message': 'Votre Message *',
         'cta-submit': 'Envoyer le Message',
         
@@ -324,9 +327,18 @@ const translations = {
         'contact-form-description': 'N\'hésitez pas à nous contacter, nous ne spammons pas votre email',
         'contact-name-placeholder': 'Nom Complet *',
         'contact-email-placeholder': 'Email Ici *',
+        'contact-phone-placeholder': 'Numéro de Téléphone *',
         'contact-service-placeholder': 'Sélectionner un Service *',
         'contact-message-placeholder': 'Votre Message *',
         'contact-submit': 'Envoyer le Message',
+        'service-option-1': 'Développement Logiciel',
+        'service-option-2': 'Infrastructure Cloud',
+        'service-option-3': 'Architecture de Base de Données',
+        'service-option-4': 'Solutions de Cybersécurité',
+        'service-option-5': 'IA et Apprentissage Automatique',
+        'service-option-6': 'Architecture Logicielle',
+        'service-option-7': 'DevOps et Pipelines CI/CD',
+        'service-option-8': 'Transformation Numérique',
         'contact-projects': '350+ Projets Réalisés',
         'contact-projects-desc': 'De la banque et de l\'assurance à la gestion de patrimoine et à la sécurité',
         'contact-clients': '500+ Clients Heureux',
@@ -418,11 +430,23 @@ function updatePageContent() {
                 } else {
                     element.textContent = translations[currentLanguage][key];
                 }
+            } else if (element.tagName === 'OPTION') {
+                // For select options, update text content
+                element.textContent = translations[currentLanguage][key];
             } else if (element.hasAttribute('data-html') || translations[currentLanguage][key].includes('<br>') || translations[currentLanguage][key].includes('<a')) {
                 element.innerHTML = translations[currentLanguage][key];
             } else {
                 element.textContent = translations[currentLanguage][key];
             }
+        }
+    });
+    
+    // Also update select option elements (in case they weren't caught above)
+    const optionElements = document.querySelectorAll('option[data-translate]');
+    optionElements.forEach(option => {
+        const key = option.getAttribute('data-translate');
+        if (translations[currentLanguage] && translations[currentLanguage][key]) {
+            option.textContent = translations[currentLanguage][key];
         }
     });
     

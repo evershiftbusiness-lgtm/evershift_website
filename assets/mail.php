@@ -14,6 +14,9 @@
 
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
 
+        $phone = strip_tags(trim($_POST["phone"]));
+
+        $service = strip_tags(trim($_POST["service"]));
 
         $message = trim($_POST["message"]);
 
@@ -21,7 +24,7 @@
 
         // Check that data was sent to the mailer.
 
-        if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if ( empty($name) OR empty($message) OR empty($phone) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
             // Set a 400 (bad request) response code and exit.
 
@@ -37,9 +40,7 @@
 
         // Set the recipient email address.
 
-        // FIXME: Update this to your desired email address.
-
-        $recipient = "ordainit0@gmail.com";
+        $recipient = "info@evershift.co.za";
 
 
 
@@ -61,9 +62,15 @@
 
         $email_content .= "Name: $name\n";
 
-        $email_content .= "Email: $email\n\n";
+        $email_content .= "Email: $email\n";
 
-        $email_content .= "Message:\n$message\n";
+        $email_content .= "Phone: $phone\n";
+
+        if (!empty($service)) {
+            $email_content .= "Service: $service\n";
+        }
+
+        $email_content .= "\nMessage:\n$message\n";
 
 
 
