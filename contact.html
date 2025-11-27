@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 
 <head>
    <meta charset="utf-8">
@@ -45,6 +45,90 @@
       /* Rounded borders for all images */
       img {
          border-radius: 12px;
+      }
+      /* Language switcher styling */
+      .language-switcher {
+         transition: all 0.3s ease;
+         display: inline-block !important;
+         background: #2B4DFF !important;
+         color: white !important;
+         border: 1px solid #2B4DFF;
+      }
+      .language-switcher:hover {
+         background: #1a3ae6 !important;
+         transform: scale(1.05);
+         box-shadow: 0 2px 8px rgba(43, 77, 255, 0.3);
+      }
+      .language-switcher .current-lang {
+         user-select: none;
+         display: block;
+      }
+      @media (max-width: 767px) {
+         .language-switcher {
+            margin-right: 10px;
+            padding: 6px 12px;
+            font-size: 12px;
+         }
+      }
+      /* Small button variant */
+      .tv-btn-small {
+         padding: 8px 20px !important;
+         font-size: 13px !important;
+         border-radius: 12px 0 12px 0 !important;
+         white-space: nowrap !important;
+         min-width: fit-content !important;
+      }
+      .tv-btn-small .btn-wrap {
+         white-space: nowrap !important;
+         display: inline-block !important;
+      }
+      .tv-btn-small .btn-wrap .btn-text1,
+      .tv-btn-small .btn-wrap .btn-text2 {
+         font-size: 13px !important;
+         white-space: nowrap !important;
+         display: inline-block !important;
+      }
+      @media (max-width: 991px) {
+         .tv-btn-small {
+            padding: 8px 16px !important;
+            font-size: 12px !important;
+         }
+         .tv-btn-small .btn-wrap .btn-text1,
+         .tv-btn-small .btn-wrap .btn-text2 {
+            font-size: 12px !important;
+         }
+      }
+      @media (max-width: 575px) {
+         .tv-btn-small {
+            padding: 6px 12px !important;
+            font-size: 11px !important;
+         }
+      }
+      /* Search icon styling */
+      .tv-header-search {
+         display: flex !important;
+         align-items: center;
+         justify-content: center;
+         border: 1px solid rgba(88, 91, 111, 0.2) !important;
+         background: #F5F6F7 !important;
+         border-radius: 50% !important;
+         width: 52px !important;
+         height: 52px !important;
+         color: #0F313A !important;
+         transition: all 0.3s ease;
+         cursor: pointer;
+      }
+      .tv-header-search:hover {
+         background: #e8e9ea !important;
+         border-color: #2B4DFF !important;
+         transform: scale(1.05);
+      }
+      .tv-header-search i {
+         font-size: 18px;
+         color: #0F313A;
+      }
+      .tv-header-search:hover i {
+         color: #2B4DFF;
       }
    </style>
 
@@ -185,7 +269,7 @@
                         <li class="d-none d-lg-inline-block">
                            <span>
                               <i class="fa-solid fa-phone"></i>
-                              <a href="tel:+27783997755">+27 78 399 7755</a>
+                              <a href="tel:+27783997755">+27 78 399 7755 / </a><a href="tel:+27636867389">+27 63 686 7389</a>
                            </span>
                         </li>
                         <li class="d-none d-lg-inline-block"><span><i class="fa-solid fa-envelope"></i><a href="mailto:info@evershift.co.za">info@evershift.co.za</a></span></li>
@@ -228,23 +312,24 @@
                   </div>
                   <div class=" col-xxl-7 col-xl-7 d-none d-xl-block">
                      <div class="tv-header-menu tv-header-dropdown">
-                        <nav class="tv-menu-content">
+                      <nav class="tv-menu-content">
                            <ul>
                               <li>
-                                 <a href="index.html">Home</a>
+                                 <a href="index.html" data-translate="nav-home">Home</a>
                               </li>
                               <li>
-                                 <a href="about.html">About Us</a>
-                              </li>
-                              <li class="has-dropdown">
-                                 <a href="service.html">Services</a>
-                                 <ul class="tv-submenu submenu">
-                                    <li><a href="service.html">Service</a></li>
-                                    <li><a href="service-details.html">Services Details</a></li>
-                                 </ul>
+                                 <a href="about.html" data-translate="nav-about">About Us</a>
                               </li>
                               <li>
-                                 <a href="contact.html">Contact</a>
+                                 <a href="service.html" data-translate="nav-services">Services</a>
+                               
+                              </li>
+                                <li>
+                                 <a href="faq.html" data-translate="nav-faq">Faqs</a>
+                               
+                              </li>
+                              <li>
+                                 <a href="contact.html" data-translate="nav-contact">Contact</a>
                               </li>
                            </ul>
                         </nav>
@@ -252,13 +337,16 @@
                   </div>
                   <div class="col-xxl-3 col-xl-3 col-6">
                      <div class="tv-header-right-action d-flex justify-content-end align-items-center">
-                        <button class="tv-header-search search-open-btn d-none d-xxl-block">
+                        <div class="language-switcher" style="margin-right: 15px; cursor: pointer; padding: 8px 15px; background: #2B4DFF; border-radius: 5px; color: white; font-weight: 600; min-width: 50px; text-align: center;">
+                           <span class="current-lang">EN</span>
+                        </div>
+                        <button class="tv-header-search search-open-btn d-none d-xl-block">
                            <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
-                        <a href="contact.html" class="tv-btn-primary d-none d-md-block">
+                        <a href="contact.html" class="tv-btn-primary tv-btn-small d-none d-md-block">
                            <span class="btn-wrap">
-                              <span class="btn-text1">Get A Quote</span>
-                              <span class="btn-text2">Get A Quote</span>
+                              <span class="btn-text1" data-translate="nav-get-quote">Get A Quote</span>
+                              <span class="btn-text2" data-translate="nav-get-quote">Get A Quote</span>
                            </span>
                         </a>
                         <div class="tv-header-bar">
@@ -315,9 +403,9 @@
                   <div class="col-xxl-6 col-xl-6 col-lg-6">
                      <div class="tv-contact-left-wrap">
                         <div class="tv-section-title-box mb-44">
-                           <span class="tv-section-subtitle tv-spltv-text tv-spltv-in-right">Contact Us</span>
-                           <h4 class="tv-section-title tv-spltv-text tv-spltv-in-right">Let’s Build an Awesome Project Together</h4>
-                           <p>Empowering African entrepreneurs and SMEs to digitize, scale and thrive through end-to-end software development, cloud engineering, cybersecurity & AI solutions. Get in touch with us to transform your business.</p>
+                           <span class="tv-section-subtitle tv-spltv-text tv-spltv-in-right" data-translate="contact-subtitle">Contact Us</span>
+                           <h4 class="tv-section-title tv-spltv-text tv-spltv-in-right" data-translate="contact-title">Let's Build an Awesome Project Together</h4>
+                           <p data-translate="contact-description">Empowering African entrepreneurs and SMEs to digitize, scale and thrive through end-to-end software development, cloud engineering, cybersecurity & AI solutions. Get in touch with us to transform your business.</p>
                         </div>
                         <div class="tv-card-box mb-40 wow itfadeUp" data-wow-delay=".2s">
                            <div class="icon">
@@ -370,25 +458,25 @@
                   </div>
                   <div class="col-xxl-6 col-xl-6 col-lg-6 wow itfadeUp" data-wow-delay=".2s">
                      <div class="tv-contact-right-wrap">
-                        <h1 class="text-white">Make an Appointment</h1>
-                        <p>Feel free to contact with us, we don’t spam your email</p>
+                        <h1 class="text-white" data-translate="contact-form-title">Make an Appointment</h1>
+                        <p data-translate="contact-form-description">Feel free to contact with us, we don't spam your email</p>
                         <form action="#">
                            <div class="tv-contact-input-box mb-24">
-                              <input type="text" placeholder="Full Name *">
+                              <input type="text" placeholder="Full Name *" data-translate="contact-name-placeholder">
                            </div>
                            <div class="tv-contact-input-box mb-24">
-                              <input type="email" placeholder="Email Here *">
+                              <input type="email" placeholder="Email Here *" data-translate="contact-email-placeholder">
                            </div>
                            <div class="tv-contact-input-box mb-24">
-                              <input type="text" placeholder="Select Service *">
+                              <input type="text" placeholder="Select Service *" data-translate="contact-service-placeholder">
                            </div>
                            <div class="it-contact-textarea-box mb-24">
-                              <textarea placeholder="Your Message *"  rows="3"></textarea>
+                              <textarea placeholder="Your Message *" rows="3" data-translate="contact-message-placeholder"></textarea>
                            </div>
                            <button class="tv-btn-primary">
                               <span class="btn-wrap">
-                                 <span class="btn-text1">Submit Message</span>
-                                 <span class="btn-text2">Submit Message</span>
+                                 <span class="btn-text1" data-translate="contact-submit">Submit Message</span>
+                                 <span class="btn-text2" data-translate="contact-submit">Submit Message</span>
                               </span>
                            </button>
                         </form>
@@ -413,24 +501,24 @@
    <footer>
 
       <!-- footer-area-start -->
-      <div class="tv-footer-wrap footer-bg z-index-1 pt-130">
+    <div class="tv-footer-wrap footer-bg z-index-1 pt-130">
          <div class="tv-footer-top-area">
             <div class="container">
                <div class="tv-footer-top-area-form">
                   <div class="row align-items-center">
                      <div class="col-xl-5 col-12">
                         <div class="tv-footer-top-heading">
-                           <h2 class="tv-spltv-text tv-spltv-in-right">Subscribe to Our Newsletter</h2>
+                           <h2 class="tv-spltv-text tv-spltv-in-right" data-translate="footer-newsletter-title" data-html="true">Subscribe to Our Newsletter</h2>
                         </div>
                      </div>
                      <div class="col-xl-7 col-12 text-xl-end">
                         <div class="tv-footer-top-form">
                            <form action="#">
-                              <input type="email" placeholder="Enter Your Email" required>
+                              <input type="email" placeholder="Enter Your Email" data-translate="footer-email-placeholder" required>
                               <button  class="tv-btn-primary p-relative">
                                  <span class="btn-wrap">
-                                    <span class="btn-text1">Submit Now</span>
-                                    <span class="btn-text2">Submit Now</span>
+                                    <span class="btn-text1" data-translate="footer-submit">Submit Now</span>
+                                    <span class="btn-text2" data-translate="footer-submit">Submit Now</span>
                                  </span>
                               </button>
                            </form>
@@ -453,15 +541,18 @@
                            </a>
                         </div>
                         <div class="tv-footer-widget-text">
-                           <p>EverShift is a 100% black-owned technology company specializing in end-to-end software solutions, cloud engineering, cybersecurity, and AI for African businesses.</p>
+                           <p data-translate="footer-description">EverShift is a 100% black-owned technology company specializing in end-to-end software solutions, cloud engineering, cybersecurity, and AI for African businesses.</p>
                         </div>
                         <div class="tv-footer-widget-contact-info">
                           <ul>
                            <li>
-                              <a href=""><i class="fa-solid fa-phone"></i>123-456-7890</a>
+                              <a href="tel:+27783997755"><i class="fa-solid fa-phone"></i>+27 78 399 7755</a>
                            </li>
                            <li>
                               <a href="mailto:info@evershift.co.za"><i class="fa-solid fa-envelope"></i>info@evershift.co.za</a>
+                           </li>
+                           <li>
+                              <a href="https://www.evershift.co.za" target="_blank"><i class="fa-solid fa-globe"></i>www.evershift.co.za</a>
                            </li>
                           </ul>
                         </div>
@@ -487,11 +578,11 @@
                         <h4 class="tv-footer-widget-title">Services</h4>
                         <div class="tv-footer-widget-menu">
                            <ul>
-                              <li><a href="service-details.html">UI/UX Design</a></li>
-                              <li><a href="service-details.html">App Development</a></li>
-                              <li><a href="service-details.html">Digital Marketing</a></li>
-                              <li><a href="service-details.html">Web Development</a></li>
-                              <li><a href="service-details.html">Cyber Security</a></li>
+                              <li><a href="#">Software Development</a></li>
+                              <li><a href="#">Cloud Engineering</a></li>
+                              <li><a href="#">Data Architecture</a></li>
+                              <li><a href="#">Cybersecurity</a></li>
+                              <li><a href="#">AI & Machine Learning</a></li>
                            </ul>
                         </div>
                        </div>
@@ -500,13 +591,13 @@
                   <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-50">
                      <div class="tv-footer-widget tv-footer-col-4 d-flex justify-content-xl-end">
                         <div>
-                           <h4 class="tv-footer-widget-title">Information</h4>
+                           <h4 class="tv-footer-widget-title" data-translate="footer-information">Information</h4>
                            <div class="tv-footer-widget-menu">
                               <ul>
-                                 <li><a href="contact.html">Working Process</a></li>
-                                 <li><a href="contact.html">Privacy Policy</a></li>
-                                 <li><a href="contact.html">Terms & Conditions</a></li>
-                                 <li><a href="faq.html">Faqs</a></li>
+                                 <li><a href="contact.html" data-translate="footer-working-process">Working Process</a></li>
+                                 <li><a href="contact.html" data-translate="footer-privacy">Privacy Policy</a></li>
+                                 <li><a href="contact.html" data-translate="footer-terms">Terms & Conditions</a></li>
+                                 <li><a href="faq.html" data-translate="nav-faq">Faqs</a></li>
                               </ul>
                            </div>
                            
@@ -522,8 +613,7 @@
                   <div class="row align-items-center">
                      <div class="col-lg-6">
                         <div class="tv-copyright-left text-center text-lg-start">
-                           <p class="mb-0">© 2025 <a href="#">Techor</a> All Rights Reserved, Created by <a
-                                 href="#">Procoderca</a></p>
+                           <p class="mb-0">© 2025 <a href="https://www.evershift.co.za">EverShift</a> <span data-translate="footer-copyright">All Rights Reserved</span></p>
                         </div>
                      </div>
                      <div class="col-lg-6 text-end">
@@ -562,6 +652,7 @@
    <script src="assets/js/custom-gsap.js"></script>
    <script src="assets/js/slider.js"></script>
    <script src="assets/js/main.js"></script>
+   <script src="assets/js/language.js"></script>
 
 
 </body>

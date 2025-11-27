@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 
 <head>
    <meta charset="utf-8">
@@ -100,6 +100,90 @@
          line-height: 1.6;
          max-height: calc(1.6em * 3);
          margin-bottom: 15px;
+      }
+      /* Language switcher styling */
+      .language-switcher {
+         transition: all 0.3s ease;
+         display: inline-block !important;
+         background: #2B4DFF !important;
+         color: white !important;
+         border: 1px solid #2B4DFF;
+      }
+      .language-switcher:hover {
+         background: #1a3ae6 !important;
+         transform: scale(1.05);
+         box-shadow: 0 2px 8px rgba(43, 77, 255, 0.3);
+      }
+      .language-switcher .current-lang {
+         user-select: none;
+         display: block;
+      }
+      @media (max-width: 767px) {
+         .language-switcher {
+            margin-right: 10px;
+            padding: 6px 12px;
+            font-size: 12px;
+         }
+      }
+      /* Small button variant */
+      .tv-btn-small {
+         padding: 8px 20px !important;
+         font-size: 13px !important;
+         border-radius: 12px 0 12px 0 !important;
+         white-space: nowrap !important;
+         min-width: fit-content !important;
+      }
+      .tv-btn-small .btn-wrap {
+         white-space: nowrap !important;
+         display: inline-block !important;
+      }
+      .tv-btn-small .btn-wrap .btn-text1,
+      .tv-btn-small .btn-wrap .btn-text2 {
+         font-size: 13px !important;
+         white-space: nowrap !important;
+         display: inline-block !important;
+      }
+      @media (max-width: 991px) {
+         .tv-btn-small {
+            padding: 8px 16px !important;
+            font-size: 12px !important;
+         }
+         .tv-btn-small .btn-wrap .btn-text1,
+         .tv-btn-small .btn-wrap .btn-text2 {
+            font-size: 12px !important;
+         }
+      }
+      @media (max-width: 575px) {
+         .tv-btn-small {
+            padding: 6px 12px !important;
+            font-size: 11px !important;
+         }
+      }
+      /* Search icon styling */
+      .tv-header-search {
+         display: flex !important;
+         align-items: center;
+         justify-content: center;
+         border: 1px solid rgba(88, 91, 111, 0.2) !important;
+         background: #F5F6F7 !important;
+         border-radius: 50% !important;
+         width: 52px !important;
+         height: 52px !important;
+         color: #0F313A !important;
+         transition: all 0.3s ease;
+         cursor: pointer;
+      }
+      .tv-header-search:hover {
+         background: #e8e9ea !important;
+         border-color: #2B4DFF !important;
+         transform: scale(1.05);
+      }
+      .tv-header-search i {
+         font-size: 18px;
+         color: #0F313A;
+      }
+      .tv-header-search:hover i {
+         color: #2B4DFF;
       }
       /* Logo styling */
       .tv-header-logo img {
@@ -253,7 +337,7 @@
                         <li class="d-none d-lg-inline-block">
                            <span>
                               <i class="fa-solid fa-phone"></i>
-                              <a href="tel:+27783997755">+27 78 399 7755</a>
+                              <a href="tel:+27783997755">+27 78 399 7755 / </a><a href="tel:+27636867389">+27 63 686 7389</a>
                            </span>
                         </li>
                         <li class="d-none d-lg-inline-block"><span><i class="fa-solid fa-envelope"></i><a href="mailto:info@evershift.co.za">info@evershift.co.za</a></span></li>
@@ -296,23 +380,24 @@
                   </div>
                   <div class=" col-xxl-7 col-xl-7 d-none d-xl-block">
                      <div class="tv-header-menu tv-header-dropdown">
-                        <nav class="tv-menu-content">
+                      <nav class="tv-menu-content">
                            <ul>
                               <li>
-                                 <a href="index.html">Home</a>
+                                 <a href="index.html" data-translate="nav-home">Home</a>
                               </li>
                               <li>
-                                 <a href="about.html">About Us</a>
-                              </li>
-                              <li class="has-dropdown">
-                                 <a href="service.html">Services</a>
-                                 <ul class="tv-submenu submenu">
-                                    <li><a href="service.html">Service</a></li>
-                                    <li><a href="service-details.html">Services Details</a></li>
-                                 </ul>
+                                 <a href="about.html" data-translate="nav-about">About Us</a>
                               </li>
                               <li>
-                                 <a href="contact.html">Contact</a>
+                                 <a href="service.html" data-translate="nav-services">Services</a>
+                               
+                              </li>
+                                <li>
+                                 <a href="faq.html" data-translate="nav-faq">Faqs</a>
+                               
+                              </li>
+                              <li>
+                                 <a href="contact.html" data-translate="nav-contact">Contact</a>
                               </li>
                            </ul>
                         </nav>
@@ -320,13 +405,16 @@
                   </div>
                   <div class="col-xxl-3 col-xl-3 col-6">
                      <div class="tv-header-right-action d-flex justify-content-end align-items-center">
-                        <button class="tv-header-search search-open-btn d-none d-xxl-block">
+                        <div class="language-switcher" style="margin-right: 15px; cursor: pointer; padding: 8px 15px; background: #2B4DFF; border-radius: 5px; color: white; font-weight: 600; min-width: 50px; text-align: center;">
+                           <span class="current-lang">EN</span>
+                        </div>
+                        <button class="tv-header-search search-open-btn d-none d-xl-block">
                            <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
-                        <a href="contact.html" class="tv-btn-primary d-none d-md-block">
+                        <a href="contact.html" class="tv-btn-primary tv-btn-small d-none d-md-block">
                            <span class="btn-wrap">
-                              <span class="btn-text1">Get A Quote</span>
-                              <span class="btn-text2">Get A Quote</span>
+                              <span class="btn-text1" data-translate="nav-get-quote">Get A Quote</span>
+                              <span class="btn-text2" data-translate="nav-get-quote">Get A Quote</span>
                            </span>
                         </a>
                         <div class="tv-header-bar">
@@ -355,17 +443,17 @@
                <div class="col-lg-12">
                   <div class="tv-breadcrumb-content z-index-1 text-center">
                      <div class="tv-breadcrumb-title-box">
-                        <h3 class="tv-breadcrumb-title tv-spltv-text tv-spltv-in-right">About us</h3>
+                        <h3 class="tv-breadcrumb-title tv-spltv-text tv-spltv-in-right" data-translate="breadcrumb-about">About us</h3>
                      </div>
                      <div class="tv-breadcrumb-list-wrap">
                         <div class="tv-breadcrumb-list">
-                           <span><a href="index.html">Home</a></span>
+                           <span><a href="index.html" data-translate="breadcrumb-home">Home</a></span>
                            <span class="dvdr">
                               <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <path d="M4.47698 6.00058L0.352151 10.1253L1.53065 11.3038L6.83398 6.00058L1.53065 0.697266L0.352151 1.87577L4.47698 6.00058Z" fill="#F5F6F7"/>
                               </svg>
                            </span>
-                           <i>About us</i>
+                           <i data-translate="breadcrumb-about">About us</i>
                         </div>
                      </div>
                   </div>
@@ -382,16 +470,16 @@
          <div class="row align-items-end">
             <div class="col-xl-5 col-lg-5">
                   <div class="tv-section-title-box">
-                     <span class="tv-section-subtitle tv-spltv-text tv-spltv-in-right">About EverShift</span>
-                     <h4 class="tv-section-title pb-20 tv-spltv-text tv-spltv-in-right">100% Black-Owned Technology Company</h4>
+                     <span class="tv-section-subtitle tv-spltv-text tv-spltv-in-right" data-translate="about-subtitle">About EverShift</span>
+                     <h4 class="tv-section-title pb-20 tv-spltv-text tv-spltv-in-right" data-translate="about-title">100% Black-Owned Technology Company</h4>
                   </div>
             </div>
             <div class="col-xl-7 col-lg-7 text-end  ">
                <div class="tv-fade-anim button" data-fade-from="top" data-ease="bounce" data-delay=".5">
                   <a href="contact.html" class="tv-btn-secondary">
                      <span class="btn-wrap">
-                        <span class="btn-text1">Know More</span>
-                        <span class="btn-text2">Know More</span>
+                        <span class="btn-text1" data-translate="about-btn">Know More</span>
+                        <span class="btn-text2" data-translate="about-btn">Know More</span>
                      </span>
                   </a>
                </div>
@@ -624,13 +712,10 @@
                                  <i class="fa-solid fa-star"></i>
                                  <i class="fa-solid fa-star"></i>
                               </div>
-                              <p>“ Working with several word themes and templates the last years only can say this is best in every level use it for my reviews that I have already are company and the reviews already ”</p>
+                              <p>"EverShift's cybersecurity assessment saved us from a potential data breach. Their team identified vulnerabilities we didn't even know existed and implemented robust security measures. The peace of mind alone is worth the investment. Their expertise in protecting African businesses is truly exceptional."</p>
                               <div class="author-info">
                                  <div>
-                                    <img src="assets/img/testimonial/test-avatar-2-1.png" alt="">
-                                 </div>
-                                 <div>
-                                    <h2>Brenda Gregory <span>Ceo & Owner</span></h2>
+                                    <h2>Dr. Nomsa Khumalo <span>IT Director, HealthCare Plus</span></h2>
                                  </div>
                               </div>
                            </div>
@@ -653,13 +738,10 @@
                                  <i class="fa-solid fa-star"></i>
                                  <i class="fa-solid fa-star"></i>
                               </div>
-                              <p>“ Working with several word themes and templates the last years only can say this is best in every level use it for my reviews that I have already are company and the reviews already ”</p>
+                              <p>"The database migration project EverShift handled for us was seamless. They moved our entire infrastructure to Azure with zero downtime. Their team's attention to detail and commitment to understanding our business needs sets them apart. We've seen a 50% improvement in query performance."</p>
                               <div class="author-info">
                                  <div>
-                                    <img src="assets/img/testimonial/test-avatar-2-2.png" alt="">
-                                 </div>
-                                 <div>
-                                    <h2>Brenda Gregory <span>Ceo & Owner</span></h2>
+                                    <h2>James Okafor <span>Chief Technology Officer, PayTech Africa</span></h2>
                                  </div>
                               </div>
                            </div>
@@ -682,13 +764,10 @@
                                  <i class="fa-solid fa-star"></i>
                                  <i class="fa-solid fa-star"></i>
                               </div>
-                              <p>“ Working with several word themes and templates the last years only can say this is best in every level use it for my reviews that I have already are company and the reviews already ”</p>
+                              <p>"As a startup, we needed a technology partner who could scale with us. EverShift delivered a cloud-native application that handles our growth seamlessly. Their understanding of cost optimization for African startups is remarkable. We've reduced our infrastructure costs by 35% while improving scalability."</p>
                               <div class="author-info">
                                  <div>
-                                    <img src="assets/img/testimonial/test-avatar-2-3.png" alt="">
-                                 </div>
-                                 <div>
-                                    <h2>Brenda Gregory <span>Ceo & Owner</span></h2>
+                                    <h2>Amara Okonkwo <span>Founder & CEO, EduTech Solutions</span></h2>
                                  </div>
                               </div>
                            </div>
@@ -716,17 +795,17 @@
                   <div class="row align-items-center">
                      <div class="col-xl-5 col-12">
                         <div class="tv-footer-top-heading">
-                           <h2 class="tv-spltv-text tv-spltv-in-right">Subscribe to Our Newsletter</h2>
+                           <h2 class="tv-spltv-text tv-spltv-in-right" data-translate="footer-newsletter-title" data-html="true">Subscribe to Our Newsletter</h2>
                         </div>
                      </div>
                      <div class="col-xl-7 col-12 text-xl-end">
                         <div class="tv-footer-top-form">
                            <form action="#">
-                              <input type="email" placeholder="Enter Your Email" required>
+                              <input type="email" placeholder="Enter Your Email" data-translate="footer-email-placeholder" required>
                               <button  class="tv-btn-primary p-relative">
                                  <span class="btn-wrap">
-                                    <span class="btn-text1">Submit Now</span>
-                                    <span class="btn-text2">Submit Now</span>
+                                    <span class="btn-text1" data-translate="footer-submit">Submit Now</span>
+                                    <span class="btn-text2" data-translate="footer-submit">Submit Now</span>
                                  </span>
                               </button>
                            </form>
@@ -749,7 +828,7 @@
                            </a>
                         </div>
                         <div class="tv-footer-widget-text">
-                           <p>EverShift is a 100% black-owned technology company specializing in end-to-end software solutions, cloud engineering, cybersecurity, and AI for African businesses.</p>
+                           <p data-translate="footer-description">EverShift is a 100% black-owned technology company specializing in end-to-end software solutions, cloud engineering, cybersecurity, and AI for African businesses.</p>
                         </div>
                         <div class="tv-footer-widget-contact-info">
                           <ul>
@@ -783,11 +862,11 @@
                         <h4 class="tv-footer-widget-title">Services</h4>
                         <div class="tv-footer-widget-menu">
                            <ul>
-                              <li><a href="service-details.html">UI/UX Design</a></li>
-                              <li><a href="service-details.html">App Development</a></li>
-                              <li><a href="service-details.html">Digital Marketing</a></li>
-                              <li><a href="service-details.html">Web Development</a></li>
-                              <li><a href="service-details.html">Cyber Security</a></li>
+                              <li><a href="#">UI/UX Design</a></li>
+                              <li><a href="#">App Development</a></li>
+                              <li><a href="#">Digital Marketing</a></li>
+                              <li><a href="#">Web Development</a></li>
+                              <li><a href="#">Cyber Security</a></li>
                            </ul>
                         </div>
                        </div>
@@ -857,6 +936,7 @@
    <script src="assets/js/custom-gsap.js"></script>
    <script src="assets/js/slider.js"></script>
    <script src="assets/js/main.js"></script>
+   <script src="assets/js/language.js"></script>
 
 
 </body>
